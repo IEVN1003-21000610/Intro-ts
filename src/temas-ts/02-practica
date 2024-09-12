@@ -1,0 +1,63 @@
+class Area{
+    protected alturaRectangulo:number;
+    protected baseRectangulo:number;
+
+    protected ladopentagono:number;
+    protected apotema:number
+
+    protected radio:number;
+    protected areaCirculo:number;
+
+    constructorArea(alturaRectangulo:number, baseRectangulo:number, ladopentagono:number, apotema:number, radio:number)
+    {
+        let areaRectangulo=alturaRectangulo*baseRectangulo;
+        let perimetropentagono=5*ladopentagono;
+        let areaPentagono=perimetropentagono;
+        let areaCirculo=((3.1416)*(radio*radio));
+    }
+    imprimirAreas()
+    {
+        console.log(`El area del rectangulo es ${this.areaRectangulo}`)
+        console.log(`El area del pentagono es ${this.areaPentagono}`)
+        console.log(`El area del circulo es ${this.areaCirculo}`)
+    }
+}
+
+///La clase Empleado va a heredar de Persona3
+class Volumen extends Area{
+    private anchorectangulo:number;
+    private volumenrectangulo:number;
+    private alturapentagono:number;
+    private volumenpentagono:number;
+    private alturacilindro:number;
+    private volumencilindro:number;
+
+    constructor(alturaRectangulo:number, baseRectangulo:number, anchorectangulo:number, volumenrectangulo:number, areaPentagono:number, alturapentagono:number, volumenpentagono:number, areaCirculo:number, alturacilindro:number, volumencilindro:number)
+    {
+        ///Con super se va a ir a la clase padre Persona3
+        super(alturaRectangulo,baseRectangulo,areapentagono,areaCirculo);
+        this.volumenrectangulo=(alturaRectangulo*baseRectangulo*anchorectangulo);
+        this.volumenpentagono=(areaPentagono*alturapentagono);
+        this.volumencilindro=(areaCirculo*alturacilindro)
+    }
+    imprimir():void{
+        console.log(`El volumen del rectangulo es ${this.volumenrectangulo}`)
+        console.log(`El volumen del pentagono es ${this.volumenpentagono}`)
+        console.log(`El volumen del cilindro es ${this.volumencilindro}`)
+    }
+    /*pagarImpuesto()
+    {
+        if(this.sueldo>5000)
+            console.log(`${this.nombre} debes de pagar impuestos NOW`);
+        else
+        console.log(`${this.nombre} no debe de pagar impuestos`)
+    }*/
+}
+
+///Intanciando de la clase persona
+const area=new Area(5, 8);
+area.imprimir()
+
+const empleado1=new Volumen(`Ana`, 22,7000);
+empleado1.imprimir()
+empleado1.pagarImpuesto();

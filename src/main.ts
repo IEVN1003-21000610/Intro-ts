@@ -1,8 +1,16 @@
 import './style.css'
-// Agregar referencia del archivo en el main import './temas-ts/01-tiposDat.ts'
+// Agregar referencia del archivo en el main 
+import './temas-ts/01-tiposDat.ts'
+import './temas-ts/02-interfaz.ts'
 import './temas-ts/03-funciones.ts'
 import './temas-ts/04-desestructuracion.ts'
 import './temas-ts/05-desestructura.funciones.ts'
+import './temas-ts/06-import-export.ts'
+import './temas-ts/07-classes.ts'
+import './temas-ts/08-herencia.ts'
+import './temas-ts/02-practica.ts'
+
+
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'

@@ -4,16 +4,15 @@ const num3=10
 
 let sum=num1+num2+num3;
 
+console.log("El numero es", sum);
+
 let nombre:string
 let num:number
 let activo:boolean
+let matricula:number|string|boolean
 
-nombre='mario'
+nombre=`mario`
 num=32
 activo=true
+matricula=`21000610`
 
-let matricula:number|string|boolean
-matricula=21000610
-matricula='21000610'
-
-console.log("El numero es", sum);
